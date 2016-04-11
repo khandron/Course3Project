@@ -16,7 +16,15 @@ Information For each record in the dataset it is provided:
 - Triaxial Angular velocity from the gyroscope.  
 - A 561-feature vector with time and frequency domain variables.  
 - Its activity label.  
-- An identifier of the subject who carried out the experiment.  
+- An identifier of the subject who carried out the experiment.
+
+Notes: 
+======
+- Features are normalized and bounded within [-1,1].
+- Each feature vector is a row on the text file.
+- The units used for the accelerations (total and body) are 'g's (gravity of earth -> 9.80665 m/seg2).
+- The gyroscope units are rad/seg.
+- A video of the experiment including an example of the 6 recorded activities with one of the participants can be seen in the following link: http://www.youtube.com/watch?v=XOEN9W05_4A
 
 ### Section 0.
 Create and set a directory if needed, download and unzip the files.
