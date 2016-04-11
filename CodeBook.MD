@@ -43,11 +43,13 @@ Read into tables the data located in
 
 Assign column names and merge to create one data set.  
 
-## Section 2. Extract only the measurements on the mean and standard deviation for each measurement. 
+### Section 2. Extract only the measurements on the mean and standard deviation for each measurement. 
 
-## Section 3. Use descriptive activity names to name the activities in the data set. Merge data subset with the activity label table to include the descriptive activity names  
+### Section 3. Use descriptive activity names to name the activities in the data set. 
+Merge data subset with the activity label table to include the descriptive activity names  
 
-## Section 4. Appropriately label the data set with descriptive activity names. Remove ()Õs and capital letters. Replace abbreviations with descriptive text.  
+### Section 4. Appropriately label the data set with descriptive activity names. 
+Remove ()Õs and capital letters. Replace abbreviations with descriptive text.  
 
-## Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.  
+### Section 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject.  
 
