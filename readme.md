@@ -15,3 +15,5 @@ Creating a directory, downloading the data from https://d396qusza40orc.cloudfron
 4.  Replaces the codes in the data names with descriptive terms.
 5.  Creates and outputs a tidy dataset that consists of the average (mean) value of each variable for each subject and activity pair.  The end result is shown in the file `tidydata.txt`.
 
+###tidydata.txt is the output file
+###codebook.md describes the variables and the project that they came from
