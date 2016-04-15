@@ -16,7 +16,7 @@ download.file(fileUrl, destfile = "data.zip", method = "curl")
 unzip("data.zip")
 
 
-
+#part 1
 #read the label, activity, subject and data files
 actLab <- read.table("UCI HAR Dataset/activity_labels.txt")
 featuresNames <- read.table("UCI HAR Dataset/features.txt")
@@ -38,7 +38,7 @@ names(act) <- c("activity")
 names(data) <- featuresNames$V2
 names(actLab) <- c("activity")
 
-#part 1
+
 #merge the data
 allData <- cbind( sub, act, data)
 
@@ -71,10 +71,9 @@ names(subData)<-gsub("Body", "body", names(subData))
 
 #part 5
 #create tidydata sorted by activity and subject with just the average, reorder the columns and fix the activity name
- 
-tidyData <- aggregate(subData[,4:ncol(subData)],by=list(subject = subData$subject, activity = subData$activity), mean)
-tidyData <- merge(tidyData,actLab,by="activity", all.x=TRUE)
-tidyData<- tidyData[c(69,1:68)]
-names(tidyData)[1] <- "activityname"
+
+tidyData<- subData[c(69,2:68)] 
+names(tidyData)[1] <- "activity"
+tidyData <- aggregate(tidyData[,3:68],by=list(subject = tidyData$subject, activity = tidyData$activity), mean)
 write.table(format(tidyData, scientific=T), "tidydata.txt", row.names=F, col.names=T, quote=2)
 
